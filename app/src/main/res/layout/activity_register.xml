@@ -14,7 +14,7 @@
     <androidx.appcompat.widget.AppCompatTextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Register page"
+        android:text="Register Page"
         android:textSize="50sp"
         android:layout_marginTop="80dp"
         />
