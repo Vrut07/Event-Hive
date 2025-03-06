@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:background="#C4C9D5C9"
+    tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Register"
+        android:textSize="50sp"
+        android:layout_marginTop="80dp"
+        />
+
+
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:textColor="@color/black"
+        android:background="@drawable/dr_border"
+        android:textSize="18sp"
+        android:layout_marginTop="50dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
+        android:hint="Enter Your Name"
+        android:drawableStart="@drawable/baseline_person_24"
+        android:drawablePadding="12dp"
+        android:imeOptions="actionNext"
+        />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:inputType="number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:background="@drawable/dr_border"
+        android:textSize="18sp"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
+        android:hint="Enter Your Mobile Number"
+        android:drawableStart="@drawable/mobile"
+        android:drawablePadding="12dp"
+        android:imeOptions="actionNext"
+        />
+
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:textColor="@color/black"
+        android:background="@drawable/dr_border"
+        android:textSize="18sp"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
+        android:hint="Enter Password"
+        android:drawableStart="@drawable/key"
+        android:drawablePadding="12dp"
+        android:imeOptions="actionNext"
+        />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:textColor="@color/black"
+        android:background="@drawable/dr_border"
+        android:textSize="18sp"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
+        android:hint="ReEnter Your Password"
+        android:drawableStart="@drawable/lock"
+        android:drawablePadding="12dp"
+        android:imeOptions="actionDone"
+        />
+
+    <RadioGroup
+        android:id="@+id/rgGender"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_marginTop="20dp"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:id="@+id/rbMale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Male"
+            android:textColor="@color/black"
+            android:textSize="15dp"
+            android:layout_marginStart="45dp"
+            />
+
+        <RadioButton
+            android:id="@+id/rbFemale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Female"
+            android:layout_marginStart="50dp"
+            android:textColor="@color/black"
+            android:textSize="15dp"/>
+
+    </RadioGroup>
+
+    <androidx.appcompat.widget.AppCompatCheckBox
+        android:id="@+id/checkTermsCondition"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="14dp"
+        android:layout_marginStart="30dp"
+        android:text="Please Accept terms and Condition"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnSignup"
+        android:visibility="gone"
+        android:text="Sign Up"
+        android:textColor="@color/black"
+        android:textSize="15dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="40dp"
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="or Login with"
+        android:layout_marginTop="50dp"
+        android:textSize="15dp"
+        />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="100dp"
+        >
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/google"
+            android:paddingStart="200dp"
+
+            />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="20dp"
+            android:src="@drawable/facebook"
+
+            />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnRegister"
+        android:hint="Already Registered? LoginIn"
+        android:layout_marginTop="60dp"
+        android:textSize="15dp"
+        android:clickable="true"
+        />
+
+</androidx.appcompat.widget.LinearLayoutCompat>
