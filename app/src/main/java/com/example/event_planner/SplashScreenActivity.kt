@@ -18,3 +18,4 @@ class SplashScreenActivity : AppCompatActivity() {
             finish() },3000)
     }
 }
+
