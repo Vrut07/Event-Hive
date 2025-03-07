@@ -1,24 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <androidx.cardview.widget.CardView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     app:cardElevation="10dp"
-    app:cardCornerRadius="8dp"
-    android:layout_margin="30dp">
+    app:cardCornerRadius="9dp"
+    android:layout_margin="18dp">
 
     <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#2841F2"
-
+        android:background="#297FD0"
         android:padding="8dp"
         android:orientation="vertical">
 
         <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/imgHome"
             android:layout_width="match_parent"
+            android:background="@drawable/dr_border"
             android:layout_height="200dp"/>
     <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"
