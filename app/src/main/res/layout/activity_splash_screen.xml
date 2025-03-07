@@ -15,6 +15,6 @@
         android:layout_height="wrap_content"
         android:id="@+id/imgsplash"
 
-        android:src="@drawable/google"/>
+        android:src="@drawable/logo"/>
 
 </androidx.appcompat.widget.LinearLayoutCompat>

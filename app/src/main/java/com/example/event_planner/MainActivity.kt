@@ -10,6 +10,7 @@ import com.example.event_planner.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
     private lateinit var mainBinding: ActivityMainBinding
+    //private lateinit var loginBinding: ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -18,6 +19,9 @@ class MainActivity : AppCompatActivity() {
         setContentView(mainBinding.root)
         mainBinding.btnRegister.setOnClickListener{
             startActivity(Intent(this,RegisterActivity::class.java))
+        }
+        mainBinding.btnLogin.setOnClickListener {
+            startActivity(Intent(this,HomeActivity::class.java))
         }
 
     }
