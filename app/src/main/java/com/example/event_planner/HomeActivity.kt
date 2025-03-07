@@ -26,7 +26,7 @@ class HomeActivity : AppCompatActivity() {
         homeList1.add(HomeData(R.drawable.logo,"Logo"))
 
 
-
+//Heloooooooopo
         homeList.addAll(homeList1)
 
         homeAdapter = HomeAdapter(homeList)
