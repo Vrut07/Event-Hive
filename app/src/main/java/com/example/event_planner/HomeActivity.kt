@@ -23,6 +23,8 @@ class HomeActivity : AppCompatActivity() {
         homeList1.add(HomeData(R.drawable.wedding,"Place And Venue Bookings"))
         homeList1.add(HomeData(R.drawable.marraige,"Decoration Bookings"))
         homeList1.add(HomeData(R.drawable.flower,"Flowers And Bouquets"))
+        homeList1.add(HomeData(R.drawable.logo,"Logo"))
+
 
 
         homeList.addAll(homeList1)
