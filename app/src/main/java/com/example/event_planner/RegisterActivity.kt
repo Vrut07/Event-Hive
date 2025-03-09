@@ -1,5 +1,6 @@
 package com.example.event_planner
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
@@ -38,5 +39,10 @@ class RegisterActivity : AppCompatActivity() {
                 Toast.makeText(this,"Female",Toast.LENGTH_LONG).show()
             }
         }
+        registerBinding.btnSignup.setOnClickListener {
+            startActivity(Intent(this,HomeActivity::class.java))
+            finish()
+        }
     }
+
 }
