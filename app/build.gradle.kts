@@ -21,6 +21,8 @@ android {
         enable=true
     }
 
+
+
     buildTypes {
         release {
             isMinifyEnabled = false
@@ -56,4 +58,5 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+
 }

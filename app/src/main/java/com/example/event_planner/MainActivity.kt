@@ -22,6 +22,7 @@ class MainActivity : AppCompatActivity() {
         }
         mainBinding.btnLogin.setOnClickListener {
             startActivity(Intent(this,HomeActivity::class.java))
+            finish()
         }
 
     }
