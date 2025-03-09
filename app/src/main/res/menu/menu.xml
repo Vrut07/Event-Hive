@@ -7,7 +7,7 @@
     <item android:title="profile"
         android:id="@+id/profile"
         android:icon="@drawable/lock"/>
-    <item android:title="Item"
-        android:id="@+id/item"
+    <item android:title="history"
+        android:id="@+id/history"
         android:icon="@drawable/mobile"/>
 </menu>
