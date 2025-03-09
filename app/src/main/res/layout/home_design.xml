@@ -6,6 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     app:cardElevation="10dp"
+    android:fitsSystemWindows="true"
     app:cardCornerRadius="9dp"
     android:layout_margin="18dp">
 
@@ -16,11 +17,18 @@
         android:padding="8dp"
         android:orientation="vertical">
 
-        <androidx.appcompat.widget.AppCompatImageView
-            android:id="@+id/imgHome"
+        <FrameLayout
             android:layout_width="match_parent"
-            android:background="@drawable/dr_border"
-            android:layout_height="200dp"/>
+            android:layout_height="225dp"
+            android:background="@drawable/wedding1"
+            android:padding="5dp">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:scaleType="centerCrop" />
+        </FrameLayout>
     <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

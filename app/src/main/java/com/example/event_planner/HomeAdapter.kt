@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 
 class HomeAdapter(var homeList:ArrayList<HomeData>):RecyclerView.Adapter<HomeAdapter.HomeViewHolder>(){
     class HomeViewHolder(itemView:View):RecyclerView.ViewHolder(itemView){
-        var imgView = itemView.findViewById<ImageView>(R.id.imgHome)
+        var imgView = itemView.findViewById<ImageView>(R.id.imageView)
         var venueName = itemView.findViewById<TextView>(R.id.txtVenue)
     }
 

@@ -20,7 +20,7 @@ class HomeActivity : AppCompatActivity() {
         var homeList = ArrayList<HomeData>()
         var homeList1 = ArrayList<HomeData>()
 
-        homeList1.add(HomeData(R.drawable.wedding,"Place And Venue Bookings"))
+        homeList1.add(HomeData(R.drawable.wedding1,"Place And Venue Bookings"))
         homeList1.add(HomeData(R.drawable.marraige,"Decoration Bookings"))
         homeList1.add(HomeData(R.drawable.flower,"Flowers And Bouquets"))
 
