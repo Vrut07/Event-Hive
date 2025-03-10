@@ -10,11 +10,9 @@
     android:orientation="vertical"
     tools:context=".SplashScreenActivity">
 
-    <androidx.appcompat.widget.AppCompatImageView
+    <VideoView
+        android:id="@+id/splashVideo"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/imgsplash"
-
-        android:src="@drawable/logo"/>
+        android:layout_height="match_parent"/>
 
 </androidx.appcompat.widget.LinearLayoutCompat>
