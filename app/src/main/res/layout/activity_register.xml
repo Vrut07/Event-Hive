@@ -8,16 +8,24 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center_horizontal"
-    android:background="#C4C9D5C9"
+    android:background="@color/white"
     tools:context=".MainActivity">
 
-    <androidx.appcompat.widget.AppCompatTextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Register"
-        android:textSize="50sp"
-        android:layout_marginTop="80dp"
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@drawable/logo"
+        android:layout_marginTop="50dp"
         />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="Create your Account"
+        android:textSize="22dp"
+        android:textStyle="bold"
+        android:layout_marginStart="35dp"/>
 
 
 
@@ -28,11 +36,11 @@
         android:textColor="@color/black"
         android:background="@drawable/dr_border"
         android:textSize="18sp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="40dp"
         android:layout_marginStart="50dp"
         android:layout_marginEnd="50dp"
-        android:hint="Enter Your Name"
-        android:drawableStart="@drawable/baseline_person_24"
+        android:hint="Enter Your Username"
+        android:drawableStart="@drawable/duser"
         android:drawablePadding="12dp"
         android:imeOptions="actionNext"
         />
@@ -86,99 +94,20 @@
         android:imeOptions="actionDone"
         />
 
-    <RadioGroup
-        android:id="@+id/rgGender"
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_marginTop="20dp"
-        android:layout_height="wrap_content">
-
-        <RadioButton
-            android:id="@+id/rbMale"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Male"
-            android:textColor="@color/black"
-            android:textSize="15dp"
-            android:layout_marginStart="45dp"
-            />
-
-        <RadioButton
-            android:id="@+id/rbFemale"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Female"
-            android:layout_marginStart="50dp"
-            android:textColor="@color/black"
-            android:textSize="15dp"/>
-
-    </RadioGroup>
-
-    <androidx.appcompat.widget.AppCompatCheckBox
-        android:id="@+id/checkTermsCondition"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textColor="@color/black"
-        android:textSize="14dp"
-        android:layout_marginStart="30dp"
-        android:text="Please Accept terms and Condition"/>
 
     <androidx.appcompat.widget.AppCompatButton
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        android:id="@+id/btnSignup"
-        android:visibility="gone"
-        android:text="Sign Up"
-        android:textColor="@color/black"
-        android:textSize="15dp"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="40dp"
-        />
-
-    <androidx.appcompat.widget.AppCompatTextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="or Login with"
-        android:layout_marginTop="50dp"
-        android:textSize="15dp"
-        />
-
-    <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="15dp"
-        android:layout_marginEnd="100dp"
-        >
-
-        <androidx.appcompat.widget.AppCompatImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/google"
-            android:paddingStart="200dp"
-
-            />
-
-        <androidx.appcompat.widget.AppCompatImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingStart="20dp"
-            android:src="@drawable/facebook"
-
-            />
-
-    </androidx.appcompat.widget.LinearLayoutCompat>
-
-
-
-    <androidx.appcompat.widget.AppCompatTextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/btnRegister"
-        android:hint="Already Registered? LoginIn"
-        android:layout_marginTop="60dp"
+        android:id="@+id/btnSignup"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:text="Sign UP"
         android:textSize="15dp"
-        android:clickable="true"
+        android:backgroundTint="#0826CC"
+        android:background="@drawable/dr_border"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="40dp"
+
         />
 
 </androidx.appcompat.widget.LinearLayoutCompat>

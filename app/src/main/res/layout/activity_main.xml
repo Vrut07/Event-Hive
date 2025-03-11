@@ -1,11 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-<ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:fillViewport="true">
-
 <androidx.appcompat.widget.LinearLayoutCompat
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -15,7 +8,9 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center_horizontal"
-    android:background="#86AB9D"
+    android:padding="20dp"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
     tools:context=".MainActivity">
 
     <!--hello this is change by disha-->
@@ -24,16 +19,25 @@
     <androidx.appcompat.widget.AppCompatImageView
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:background="@drawable/baseline_person_24"
-        android:layout_marginTop="200dp"
+        android:background="@drawable/logo"
+        android:layout_marginTop="50dp"
         />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="Login to your Account"
+        android:textSize="22dp"
+        android:textStyle="bold"
+        android:layout_marginStart="24dp"/>
 
    <androidx.appcompat.widget.AppCompatEditText
        android:layout_width="match_parent"
        android:layout_height="wrap_content"
        android:textColor="@color/black"
-       android:textSize="18dp"
-       android:layout_marginTop="30dp"
+       android:textSize="20dp"
+       android:layout_marginTop="40dp"
        android:layout_marginStart="30dp"
        android:layout_marginEnd="30dp"
        android:hint="Enter Email/Mobile Number"
@@ -46,7 +50,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textColor="@color/black"
-        android:textSize="18dp"
+        android:textSize="20dp"
         android:layout_marginTop="30dp"
         android:layout_marginStart="30dp"
         android:layout_marginEnd="30dp"
@@ -59,69 +63,87 @@
     <androidx.appcompat.widget.AppCompatTextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:hint="Forgot Password?"
-        android:layout_marginTop="10dp"
+        android:text="Forgot Password?"
+        android:textColor="@color/blue"
+        android:layout_marginTop="12dp"
         android:layout_marginLeft="100dp"
-        android:textSize="16sp"
+        android:textSize="15dp"
         />
 
 
     <androidx.appcompat.widget.AppCompatButton
-        android:layout_width="150dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/btnLogin"
-        android:text="LOGIN"
-        android:textSize="15dp"
+        android:id="@+id/btnSignin"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:background="@drawable/dr_border"
+        android:text="SIGN IN"
+        android:textSize="20dp"
+        android:backgroundTint="@color/blue"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="25dp"
+        android:layout_marginTop="30dp"
 
         />
 
     <androidx.appcompat.widget.AppCompatTextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="or Login with"
-        android:layout_marginTop="150dp"
-        android:textSize="15dp"
+        android:text="or Sign in With"
+        android:textStyle="bold"
+        android:layout_marginTop="40dp"
+        android:textSize="16dp"
         />
 
 
     <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="70dp"
         android:orientation="horizontal"
-        android:layout_marginTop="15dp"
-        android:layout_marginEnd="100dp"
-        >
+        android:layout_marginTop="30dp"
+        android:gravity="center">
 
-    <androidx.appcompat.widget.AppCompatImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/google"
-        android:paddingStart="200dp"
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginEnd="40dp"
+            android:src="@drawable/google"/>
 
-        />
-<!--hello-kfsjksfjlkfs-->
-    <androidx.appcompat.widget.AppCompatImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:paddingStart="20dp"
-        android:src="@drawable/facebook"
-
-        />
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/facebook"/>
 
     </androidx.appcompat.widget.LinearLayoutCompat>
 
-    <androidx.appcompat.widget.AppCompatTextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/btnRegister"
-        android:hint="Haven't Register?  Sign Up"
-        android:textSize="15sp"
-        android:layout_marginTop="40dp"
-        android:clickable="true"
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:layout_marginTop="5dp">
 
-        />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Don't have an account ?"
+            android:textSize="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="60dp"
+            android:textColor="@color/black"
+            />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtSignup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="17dp"
+            android:text="Sign up"
+            android:textColor="@color/blue"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="8dp"
+            />
 
 </androidx.appcompat.widget.LinearLayoutCompat>
-</ScrollView>
+</androidx.appcompat.widget.LinearLayoutCompat>
