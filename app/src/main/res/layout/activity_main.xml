@@ -16,10 +16,11 @@
     <androidx.appcompat.widget.AppCompatTextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="77dp"
         android:text="Event Hive"
-        android:textSize="35sp"
+        android:textSize="60sp"
         android:textStyle="bold"
+        android:textColor="#2E6CA2"
         />
 
 
@@ -83,8 +84,8 @@
         android:layout_marginRight="40dp"
         android:background="@drawable/dr_border"
         android:text="SIGN IN"
-        android:textSize="20sp"
-        android:backgroundTint="#3752D9"
+        android:textSize="20dp"
+        android:backgroundTint="#0147AB"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="30dp"
 
@@ -96,7 +97,7 @@
         android:text="or Sign in With"
         android:textStyle="bold"
         android:layout_marginTop="40dp"
-        android:textSize="16sp"
+        android:textSize="16dp"
         />
 
 
@@ -104,7 +105,7 @@
         android:layout_width="match_parent"
         android:layout_height="70dp"
         android:orientation="horizontal"
-        android:layout_marginTop="35dp"
+        android:layout_marginTop="30dp"
         android:gravity="center">
 
         <androidx.appcompat.widget.AppCompatImageView
