@@ -13,23 +13,24 @@
     android:fitsSystemWindows="true"
     tools:context=".MainActivity">
 
-
-
-    <androidx.appcompat.widget.AppCompatImageView
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:background="@drawable/logo"
-        android:layout_marginTop="50dp"
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Event Hive"
+        android:textSize="35sp"
+        android:textStyle="bold"
         />
 
+
     <androidx.appcompat.widget.AppCompatTextView
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
         android:text="Login to your Account"
-        android:textSize="22dp"
+        android:textSize="22sp"
         android:textStyle="bold"
-        android:layout_marginStart="24dp"/>
+        />
 
    <androidx.appcompat.widget.AppCompatEditText
        android:layout_width="match_parent"
@@ -82,8 +83,8 @@
         android:layout_marginRight="40dp"
         android:background="@drawable/dr_border"
         android:text="SIGN IN"
-        android:textSize="20dp"
-        android:backgroundTint="@color/blue"
+        android:textSize="20sp"
+        android:backgroundTint="#3752D9"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="30dp"
 
@@ -95,7 +96,7 @@
         android:text="or Sign in With"
         android:textStyle="bold"
         android:layout_marginTop="40dp"
-        android:textSize="16dp"
+        android:textSize="16sp"
         />
 
 
@@ -103,7 +104,7 @@
         android:layout_width="match_parent"
         android:layout_height="70dp"
         android:orientation="horizontal"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="35dp"
         android:gravity="center">
 
         <androidx.appcompat.widget.AppCompatImageView
@@ -111,7 +112,7 @@
             android:layout_height="50dp"
             android:layout_gravity="center_horizontal"
             android:layout_marginEnd="40dp"
-            android:src="@drawable/google"/>
+            android:src="@drawable/googleimage"/>
 
         <androidx.appcompat.widget.AppCompatImageView
             android:layout_width="50dp"
@@ -132,8 +133,8 @@
             android:layout_height="wrap_content"
             android:text="Don't have an account ?"
             android:textSize="16dp"
-            android:layout_marginTop="22dp"
-            android:layout_marginStart="60dp"
+            android:layout_marginTop="130dp"
+            android:layout_marginStart="67dp"
             android:textColor="@color/black"
             />
 
@@ -144,7 +145,7 @@
             android:textSize="17dp"
             android:text="Sign up"
             android:textColor="@color/blue"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="130dp"
             android:layout_marginStart="8dp"
             />
 
