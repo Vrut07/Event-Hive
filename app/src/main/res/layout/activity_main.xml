@@ -13,8 +13,7 @@
     android:fitsSystemWindows="true"
     tools:context=".MainActivity">
 
-    <!--hello this is change by disha-->
-    <!-- this is change by vrut-->
+
 
     <androidx.appcompat.widget.AppCompatImageView
         android:layout_width="100dp"
