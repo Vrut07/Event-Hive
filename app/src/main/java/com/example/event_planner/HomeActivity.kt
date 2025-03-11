@@ -20,11 +20,17 @@ class HomeActivity : AppCompatActivity() {
 
         homeBinding = ActivityHomeBinding.inflate(layoutInflater)
         setContentView(homeBinding.root)
+        // Show Home fragment by default when app launches
+        replaceFragment(Home())
+
+        homeBinding.bottomNavigationView.selectedItemId = R.id.home // Highlight "Home" tab
+
+
 
         homeBinding.bottomNavigationView.setOnItemSelectedListener { item ->
             when (item.itemId) {
-                R.id.home -> replaceFragment(Home())
                 R.id.profile -> replaceFragment(Profile())
+                R.id.home -> replaceFragment(Home())
                 R.id.history -> replaceFragment(History())
             }
             true // Explicitly return true to indicate selection was handled
