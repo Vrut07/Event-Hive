@@ -102,7 +102,7 @@
         android:layout_marginLeft="40dp"
         android:layout_marginRight="40dp"
         android:text="Sign UP"
-        android:textSize="15dp"
+        android:textSize="20dp"
         android:backgroundTint="@color/blue"
         android:background="@drawable/dr_border"
         android:layout_gravity="center_horizontal"
