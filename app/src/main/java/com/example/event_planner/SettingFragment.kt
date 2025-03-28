@@ -6,11 +6,11 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 
-class History : Fragment(R.layout.fragment_history) {
+class SettingFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_history, container, false)
+        return inflater.inflate(R.layout.fragment_setting, container, false)
     }
 }

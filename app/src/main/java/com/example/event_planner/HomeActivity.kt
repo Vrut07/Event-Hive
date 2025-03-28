@@ -1,60 +1,44 @@
 package com.example.event_planner
 
 import android.os.Bundle
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import androidx.fragment.app.Fragment
-import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.event_planner.databinding.ActivityHomeBinding
-
+import com.example.eventplanner.HomeFragment
+import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class HomeActivity : AppCompatActivity() {
-    private lateinit var homeBinding: ActivityHomeBinding
-    private lateinit var homeAdapter: HomeAdapter
+
+    private lateinit var binding: ActivityHomeBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
 
-        homeBinding = ActivityHomeBinding.inflate(layoutInflater)
-        setContentView(homeBinding.root)
-        // Show Home fragment by default when app launches
-        replaceFragment(Home())
+        binding = ActivityHomeBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
-        homeBinding.bottomNavigationView.selectedItemId = R.id.home // Highlight "Home" tab
-
-
-
-        homeBinding.bottomNavigationView.setOnItemSelectedListener { item ->
-            when (item.itemId) {
-                R.id.profile -> replaceFragment(Profile())
-                R.id.home -> replaceFragment(Home())
-                R.id.history -> replaceFragment(History())
-            }
-            true // Explicitly return true to indicate selection was handled
+        // Set HomeFragment as the default
+        if (savedInstanceState == null) {
+            replaceFragment(HomeFragment())
         }
 
+        // Handle bottom navigation item selection
+        binding.bottomNavigationView.setOnItemSelectedListener { item ->
+            when (item.itemId) {
+                R.id.nav_home -> replaceFragment(HomeFragment())  // Home (Center)
+                R.id.nav_profile -> replaceFragment(ProfileFragment()) // Left
+                R.id.nav_settings -> replaceFragment(SettingFragment()) // Right
+            }
+            true
+        }
 
-
-        // Optimized home list creation
-        val homeList = arrayListOf(
-            HomeData(R.drawable.wedding, "Place And Venue Bookings"),
-            HomeData(R.drawable.marraige, "Decoration Bookings"),
-            HomeData(R.drawable.flower, "Flowers And Bouquets")
-        )
-
-        // Setup RecyclerView
-        homeAdapter = HomeAdapter(homeList)
-        homeBinding.rvHome.layoutManager = LinearLayoutManager(this)
-        homeBinding.rvHome.adapter = homeAdapter
+        // Set Home as selected by default
+        binding.bottomNavigationView.selectedItemId = R.id.nav_home
     }
 
     private fun replaceFragment(fragment: Fragment) {
-        val fragmentManager = supportFragmentManager
-        val fragmentTransaction = fragmentManager.beginTransaction()
-        fragmentTransaction.replace(R.id.frame_layout, fragment)
-        fragmentTransaction.commit()
+        supportFragmentManager.beginTransaction()
+            .replace(R.id.fragment_container, fragment)
+            .commit()
     }
 }

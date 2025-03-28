@@ -3,13 +3,16 @@
 
 
 
-    <item android:title="Profile"
-        android:id="@+id/profile"
+    <item
+        android:id="@+id/nav_profile"
+        android:title="Profile"
         android:icon="@drawable/user"/>
-    <item android:title="Home"
-        android:id="@+id/home"
+    <item
+        android:id="@+id/nav_home"
+        android:title="Home"
         android:icon="@drawable/home"/>
-    <item android:title="History"
-        android:id="@+id/history"
+    <item
+        android:id="@+id/nav_settings"
+        android:title="Settings"
         android:icon="@drawable/history"/>
 </menu>
