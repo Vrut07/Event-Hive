@@ -1,14 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.appcompat.widget.LinearLayoutCompat
+<androidx.core.widget.NestedScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:gravity="center">
+    android:background="@color/white"
+    android:padding="16dp">
 
-    <androidx.appcompat.widget.AppCompatTextView
-        android:layout_width="wrap_content"
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Settings Fragment"
-        android:textSize="24sp"/>
-</androidx.appcompat.widget.LinearLayoutCompat>
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <!-- Title -->
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Settings"
+            android:textSize="24sp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginBottom="20dp"/>
+
+        <!-- Privacy -->
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textPrivacy"
+            style="@style/SettingItemStyle"
+            android:text="Privacy"/>
+
+        <!-- Account -->
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textAccount"
+            style="@style/SettingItemStyle"
+            android:text="Account"/>
+
+        <!-- Notification -->
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textNotification"
+            style="@style/SettingItemStyle"
+            android:text="Notification"/>
+
+        <!-- Delete Account -->
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textDeleteAccount"
+            style="@style/SettingItemStyle"
+            android:text="Delete Account"
+            android:textColor="@android:color/holo_red_dark"/>
+
+        <!-- Version -->
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textVersion"
+            style="@style/SettingItemStyle"
+            android:text="Version 1.0.0"
+            android:background="@drawable/item_background_disable"
+            android:textColor="@android:color/darker_gray"
+            android:clickable="false"
+            android:focusable="false"/>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</androidx.core.widget.NestedScrollView>
+
