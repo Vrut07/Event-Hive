@@ -1,4 +1,2 @@
-data class HomeItem(
-    val imageResId: Int, // Drawable resource ID
-    val title: String
-)
+// file: HomeItem.kt
+data class HomeItem(val imageResId: Int, val title: String)

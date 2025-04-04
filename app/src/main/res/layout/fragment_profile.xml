@@ -77,12 +77,7 @@
                 android:text="Favorites"
                 android:drawableStart="@drawable/ic_favourite"/>
 
-            <!-- Settings -->
-            <androidx.appcompat.widget.AppCompatTextView
-                style="@style/ProfileOptionStyle"
-                android:id="@+id/settings"
-                android:text="Settings"
-                android:drawableStart="@drawable/ic_settings"/>
+
 
             <!-- Logout -->
             <androidx.appcompat.widget.AppCompatTextView

@@ -30,6 +30,7 @@
 
 
     <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/edtUser"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="text"
@@ -46,6 +47,7 @@
         />
 
     <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/edtMobile"
         android:inputType="number"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -63,6 +65,7 @@
 
 
     <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/edtPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="text"
@@ -79,6 +82,7 @@
         />
 
     <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/edtConfirmPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="text"
