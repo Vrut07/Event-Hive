@@ -1,5 +1,6 @@
 package com.example.event_planner
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -28,7 +29,24 @@ class FlowersFragment : Fragment() {
             FlowerItem(R.drawable.wedding1, "Tulips")
         )
 
-        flowersAdapter = FlowersAdapter(flowerList)
+        flowersAdapter = FlowersAdapter(flowerList) { item ->
+            when (item.title) {
+                "Roses" -> {
+                    val intent = Intent(requireContext(), FlowerOneActivity::class.java)
+                    startActivity(intent)
+                }
+                // Add more flowers here if needed
+                "Lilies" -> {
+                    val intent = Intent(requireContext(), FlowerTwoActivity::class.java)
+                    startActivity(intent)
+                }
+                "Tulips" -> {
+                    val intent = Intent(requireContext(), FlowerThreeActivity::class.java)
+                    startActivity(intent)
+                }
+            }
+        }
+
         recyclerView.adapter = flowersAdapter
 
         return view

@@ -1,5 +1,6 @@
 package com.example.event_planner
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -29,7 +30,27 @@ class DecorationFragment : Fragment() {
             DecorationItem(R.drawable.wedding3, "Balloon Decor")
         )
 
-        decorationAdapter = DecorationAdapter(decorationList)
+        decorationAdapter = DecorationAdapter(decorationList){item ->
+            when (item.title){
+                "Floral Decorations" -> {
+                    val intent = Intent(requireContext(),DecorationOneActivity::class.java)
+                    startActivity(intent)
+                }
+                "Stage Decor" -> {
+                    val intent = Intent(requireContext(),DecorationTwoActivity::class.java)
+                    startActivity(intent)
+                }
+                "Table Arrangements" -> {
+                    val intent = Intent(requireContext(),DecorationThreeActivity::class.java)
+                    startActivity(intent)
+                }
+                "Balloon Decor" -> {
+                    val intent = Intent(requireContext(),DecorationfourActivity::class.java)
+                    startActivity(intent)
+                }
+            }
+
+        }
         recyclerView.adapter = decorationAdapter
 
         return view

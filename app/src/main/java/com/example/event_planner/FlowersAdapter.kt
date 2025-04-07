@@ -7,16 +7,19 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-class FlowersAdapter(private val flowerList: List<FlowerItem>) :
-    RecyclerView.Adapter<FlowersAdapter.FlowerViewHolder>() {
+class FlowersAdapter(
+    private val flowerList: List<FlowerItem>,
+    private val onItemClick: (FlowerItem) -> Unit
+) : RecyclerView.Adapter<FlowersAdapter.FlowerViewHolder>() {
 
     inner class FlowerViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        private val imageView: ImageView = itemView.findViewById(R.id.imageView)
-        private val textView: TextView = itemView.findViewById(R.id.textView)
+        val image: ImageView = itemView.findViewById(R.id.imageView)
+        val title: TextView = itemView.findViewById(R.id.textView)
 
-        fun bind(item: FlowerItem) {
-            imageView.setImageResource(item.imageResId)
-            textView.text = item.title
+        init {
+            itemView.setOnClickListener {
+                onItemClick(flowerList[adapterPosition])
+            }
         }
     }
 
@@ -27,7 +30,9 @@ class FlowersAdapter(private val flowerList: List<FlowerItem>) :
     }
 
     override fun onBindViewHolder(holder: FlowerViewHolder, position: Int) {
-        holder.bind(flowerList[position])
+        val item = flowerList[position]
+        holder.image.setImageResource(item.imageResId)
+        holder.title.text = item.title
     }
 
     override fun getItemCount(): Int = flowerList.size

@@ -13,6 +13,39 @@
         android:theme="@style/Theme.Event_Planner"
         tools:targetApi="31">
         <activity
+            android:name=".FlowerThreeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".FlowerTwoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".FlowerOneActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DecorationfourActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DecorationThreeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DecorationTwoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DecorationOneActivity"
+            android:exported="false" />
+        <activity
+            android:name=".VenueFourActivity"
+            android:exported="false" />
+        <activity
+            android:name=".VenueThreeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".VenueTwoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".VenueOneActivity"
+            android:exported="false" />
+        <activity
             android:name=".DeleteAccountActivity"
             android:exported="false" />
         <activity
