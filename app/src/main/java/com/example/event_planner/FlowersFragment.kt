@@ -24,9 +24,9 @@ class FlowersFragment : Fragment() {
         recyclerView.layoutManager = LinearLayoutManager(requireContext())
 
         val flowerList = listOf(
-            FlowerItem(R.drawable.wedding3, "Roses"),
-            FlowerItem(R.drawable.wedding2, "Lilies"),
-            FlowerItem(R.drawable.wedding1, "Tulips")
+            FlowerItem(R.drawable.rose, "Roses"),
+            FlowerItem(R.drawable.lilies, "Lilies"),
+            FlowerItem(R.drawable.tulip, "Tulips")
         )
 
         flowersAdapter = FlowersAdapter(flowerList) { item ->

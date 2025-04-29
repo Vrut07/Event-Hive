@@ -24,10 +24,9 @@ class DecorationFragment : Fragment() {
         recyclerView.layoutManager = LinearLayoutManager(requireContext())
 
         val decorationList = listOf(
-            DecorationItem(R.drawable.wedding3, "Floral Decorations"),
-            DecorationItem(R.drawable.wedding1, "Stage Decor"),
-            DecorationItem(R.drawable.wedding2, "Table Arrangements"),
-            DecorationItem(R.drawable.wedding3, "Balloon Decor")
+            DecorationItem(R.drawable.floral, "Floral Decorations"),
+            DecorationItem(R.drawable.theme, "Theme Decor"),
+            DecorationItem(R.drawable.balloon, "Balloon Decor")
         )
 
         decorationAdapter = DecorationAdapter(decorationList){item ->
@@ -36,16 +35,12 @@ class DecorationFragment : Fragment() {
                     val intent = Intent(requireContext(),DecorationOneActivity::class.java)
                     startActivity(intent)
                 }
-                "Stage Decor" -> {
+                "Theme Decor" -> {
                     val intent = Intent(requireContext(),DecorationTwoActivity::class.java)
                     startActivity(intent)
                 }
-                "Table Arrangements" -> {
-                    val intent = Intent(requireContext(),DecorationThreeActivity::class.java)
-                    startActivity(intent)
-                }
                 "Balloon Decor" -> {
-                    val intent = Intent(requireContext(),DecorationfourActivity::class.java)
+                    val intent = Intent(requireContext(),DecorationThreeActivity::class.java)
                     startActivity(intent)
                 }
             }

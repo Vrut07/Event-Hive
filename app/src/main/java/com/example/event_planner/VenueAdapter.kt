@@ -14,7 +14,6 @@ class VenueAdapter(
 
     inner class VenueViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val title = itemView.findViewById<TextView>(R.id.venueName)
-        val location = itemView.findViewById<TextView>(R.id.venueLocation)
         val image = itemView.findViewById<ImageView>(R.id.venueImage)
 
         init {
@@ -32,7 +31,6 @@ class VenueAdapter(
     override fun onBindViewHolder(holder: VenueViewHolder, position: Int) {
         val item = venueList[position]
         holder.title.text = item.name
-        holder.location.text = item.location
         holder.image.setImageResource(item.imageResId)
     }
 

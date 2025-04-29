@@ -21,9 +21,7 @@
         <activity
             android:name=".FlowerOneActivity"
             android:exported="false" />
-        <activity
-            android:name=".DecorationfourActivity"
-            android:exported="false" />
+
         <activity
             android:name=".DecorationThreeActivity"
             android:exported="false" />
