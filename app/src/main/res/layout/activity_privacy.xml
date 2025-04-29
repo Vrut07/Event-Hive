@@ -13,12 +13,57 @@
         android:textSize="28sp"
         android:textStyle="bold"
         android:layout_gravity="center"
+        android:paddingTop="50dp"
         android:paddingBottom="10dp"/>
 
     <androidx.appcompat.widget.AppCompatTextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
-        android:text="This app respects your privacy. Your data is secure and will not be shared with third parties."
+        android:text="Last updated: 28/04/2025."
         android:textSize="16sp"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="Your privacy is important to us. This Privacy Policy explains how our app collects, uses, and protects your information."
+        android:textSize="16sp"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="1. Information We Collect :\n
+Personal Information: If you choose to enter your name, email, or event details, this data is stored only on your device."
+        android:textSize="16sp"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="Device Information: We may collect anonymous device information for crash reporting or analytics (if implemented)."
+        android:textSize="16sp"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="2. Sharing of Information :\nWe do not share your personal information with third parties.
+   \n\n\n 3. Security :\nWe implement standard security practices to protect your information. However, no method of transmission or storage is 100% secure.
+"
+        android:textSize="16sp"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="4. Contact Us:\nIf you have any questions or concerns about this Privacy Policy, contact us at:\n vrutttalsaniya@gmail.com
+"
+        android:textSize="16sp"/>
+
+
+
+
+
 </androidx.appcompat.widget.LinearLayoutCompat>
