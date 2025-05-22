@@ -38,6 +38,16 @@
                 android:layout_marginTop="12dp"
                 android:src="@drawable/ballon1"
                 android:scaleType="centerCrop" />
+            <ImageButton
+                android:id="@+id/heart_button1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="8dp"
+                android:background="@android:color/transparent"
+                android:src="@drawable/ic_heart_outline"
+                android:layout_marginLeft="130dp"
+                android:contentDescription="Heart Button" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -143,6 +153,16 @@
                 android:layout_marginTop="12dp"
                 android:src="@drawable/ballon2"
                 android:scaleType="centerCrop" />
+            <ImageButton
+                android:id="@+id/heart_button2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="8dp"
+                android:background="@android:color/transparent"
+                android:src="@drawable/ic_heart_outline"
+                android:layout_marginLeft="130dp"
+                android:contentDescription="Heart Button" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -248,6 +268,16 @@
                 android:layout_marginTop="12dp"
                 android:src="@drawable/balloon3"
                 android:scaleType="centerCrop" />
+            <ImageButton
+                android:id="@+id/heart_button3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="8dp"
+                android:background="@android:color/transparent"
+                android:src="@drawable/ic_heart_outline"
+                android:layout_marginLeft="130dp"
+                android:contentDescription="Heart Button" />
 
             <TextView
                 android:layout_width="match_parent"

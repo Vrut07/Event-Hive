@@ -13,6 +13,9 @@
         android:theme="@style/Theme.Event_Planner"
         tools:targetApi="31">
         <activity
+            android:name=".EditProfileActivity"
+            android:exported="false" />
+        <activity
             android:name=".FlowerThreeActivity"
             android:exported="false" />
         <activity
@@ -21,7 +24,6 @@
         <activity
             android:name=".FlowerOneActivity"
             android:exported="false" />
-
         <activity
             android:name=".DecorationThreeActivity"
             android:exported="false" />
