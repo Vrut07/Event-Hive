@@ -1,26 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.appcompat.widget.LinearLayoutCompat
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="16dp"
-    android:orientation="vertical">
+    android:background="@color/white">
 
-    <androidx.appcompat.widget.AppCompatTextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Account"
-        android:textSize="28sp"
-        android:layout_gravity="center"
-        android:textStyle="bold"
-        android:paddingBottom="10dp"/>
-
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/textAccountDetails"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Account details here"
-        android:layout_marginTop="20dp"
-        android:textSize="16sp"
-        android:textColor="#000000" />
-</androidx.appcompat.widget.LinearLayoutCompat>
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <!-- Title -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Account Details"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:paddingBottom="12dp"
+            android:textColor="@color/black" />
+
+        <!-- Profile Image -->
+        <ImageView
+            android:id="@+id/imageAccountProfile"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:scaleType="centerCrop"
+            android:layout_marginTop="12dp"
+            android:src="@drawable/profile"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Details Text -->
+        <TextView
+            android:id="@+id/textAccountDetails"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Account details will appear here"
+            android:textSize="16sp"
+            android:textColor="@android:color/black"
+            android:padding="8dp" />
+    </LinearLayout>
+</ScrollView>

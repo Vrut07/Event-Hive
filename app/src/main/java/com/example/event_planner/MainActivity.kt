@@ -3,7 +3,6 @@ package com.example.event_planner
 import android.content.Intent
 import android.os.Bundle
 import android.text.TextUtils
-import android.util.Patterns
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.event_planner.databinding.ActivityMainBinding
@@ -11,27 +10,38 @@ import com.google.firebase.database.*
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var mainBinding: ActivityMainBinding
+    private lateinit var binding: ActivityMainBinding
     private lateinit var database: DatabaseReference
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        mainBinding = ActivityMainBinding.inflate(layoutInflater)
-        setContentView(mainBinding.root)
+        // --- ADDITION: Auto-login redirect ---
+        val prefs = getSharedPreferences("user_data", MODE_PRIVATE)
+        val savedMobile = prefs.getString("mobile", null)
+        if (!savedMobile.isNullOrEmpty()) {
+            // User already logged in, redirect to HomeActivity
+            startActivity(Intent(this, HomeActivity::class.java))
+            finish()
+            return
+        }
+        // --- END ADDITION ---
 
-        // Firebase reference
-        database = FirebaseDatabase.getInstance().reference.child("Users")
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+
+        // Initialize Firebase database reference
+        database = FirebaseDatabase.getInstance().getReference("Users")
 
         // Go to Register screen
-        mainBinding.txtSignup.setOnClickListener {
+        binding.txtSignup.setOnClickListener {
             startActivity(Intent(this, RegisterActivity::class.java))
         }
 
-        // Sign In Logic
-        mainBinding.btnSignin.setOnClickListener {
-            val mobile = mainBinding.txtEmail.text.toString().trim()
-            val password = mainBinding.txtPassword.text.toString().trim()
+        // Sign In logic
+        binding.btnSignin.setOnClickListener {
+            val mobile = binding.txtEmail.text.toString().trim()
+            val password = binding.txtPassword.text.toString().trim()
 
             if (validateInput(mobile, password)) {
                 loginUser(mobile, password)
@@ -41,19 +51,17 @@ class MainActivity : AppCompatActivity() {
 
     private fun validateInput(mobile: String, password: String): Boolean {
         if (TextUtils.isEmpty(mobile)) {
-            mainBinding.txtEmail.error = "Enter Mobile Number"
+            binding.txtEmail.error = "Enter Mobile Number"
             return false
         }
         if (!mobile.matches(Regex("^[0-9]{10}$"))) {
-            mainBinding.txtEmail.error = "Enter a valid 10-digit Mobile Number"
+            binding.txtEmail.error = "Enter a valid 10-digit Mobile Number"
             return false
         }
-
         if (TextUtils.isEmpty(password)) {
-            mainBinding.txtPassword.error = "Enter Password"
+            binding.txtPassword.error = "Enter Password"
             return false
         }
-
         return true
     }
 
@@ -63,8 +71,10 @@ class MainActivity : AppCompatActivity() {
                 if (snapshot.exists()) {
                     val dbPassword = snapshot.child("password").value.toString()
                     if (dbPassword == password) {
-                        val prefs = getSharedPreferences("UserData", MODE_PRIVATE)
+                        // ✅ Save mobile number to SharedPreferences
+                        val prefs = getSharedPreferences("user_data", MODE_PRIVATE)
                         prefs.edit().putString("mobile", mobile).apply()
+
                         Toast.makeText(this@MainActivity, "Login Successful!", Toast.LENGTH_SHORT).show()
                         startActivity(Intent(this@MainActivity, HomeActivity::class.java))
                         finish()

@@ -29,7 +29,6 @@ class ProfileFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        // Get user mobile from SharedPreferences
         val sharedPref = requireActivity().getSharedPreferences("UserData", 0)
         mobile = sharedPref.getString("mobile", "") ?: ""
 
@@ -38,19 +37,25 @@ class ProfileFragment : Fragment() {
             loadUserData()
         }
 
-        // Handle edit profile click
         binding.btnEditProfile.setOnClickListener {
             val intent = Intent(requireContext(), EditProfileActivity::class.java)
             intent.putExtra("mobile", mobile)
             startActivity(intent)
         }
 
-        // Handle logout
         binding.logout.setOnClickListener {
             sharedPref.edit().clear().apply()
             Toast.makeText(requireContext(), "Logged out", Toast.LENGTH_SHORT).show()
             startActivity(Intent(requireContext(), MainActivity::class.java))
             requireActivity().finish()
+        }
+    }
+
+    // 🔁 Refresh data after returning from EditProfileActivity
+    override fun onResume() {
+        super.onResume()
+        if (this::mobile.isInitialized && mobile.isNotEmpty()) {
+            loadUserData()
         }
     }
 
